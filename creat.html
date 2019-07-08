@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>   
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    var box = $("box");
+    var h1 = document.createElement("h1");
+    h1.innerHTML = "我是h1标签";
+    box.appendChild(h1);
+    var s = document.createElement("span");
+    s.innerHTML = "我是span标签";
+    box.appendChild(s);
+    var img = document.createElement("img");
+    img.src = "../利牛网/news1.png"
+    box.appendChild(img);
+    var a = document.createElement("a");
+    a.href = "https://www.baidu.com";
+    a.innerHTML = "百度";
+    box.appendChild(a);
+</script>
+</html>

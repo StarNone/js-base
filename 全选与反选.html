@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">
+        <input type="checkbox" id="all">全选
+    </label>    
+    <label for="">
+        <input type="checkbox" id="reverse">反选
+    </label>
+    <div id="box">
+        <label for="">
+            <input type="checkbox" name="sports" value="1">足球
+        </label>
+        <label for="">
+            <input type="checkbox" name="sports" value="2">篮球
+        </label>
+        <label for="">
+            <input type="checkbox" name="sports" value="3">乒乓球
+        </label>
+        <label for="">
+            <input type="checkbox" name="sports" value="4">网球
+        </label>
+    </div>
+</body>
+<script>
+    var all = document.getElementById("all");
+    var reverse = document.getElementById("reverse");
+    var box = document.getElementById("box");
+    var checkname = box.getElementsByTagName("input");
+    all.onchange = function(){
+        if(all.checked){
+            for(var i = 0; i < checkname.length; i++){
+                checkname[i].checked = true;
+            }
+        } else {
+            for(var i = 0; i < checkname.length; i ++){
+                checkname[i].checked = false;
+            }
+        }
+    }
+    reverse.onchange = function(){
+        if(reverse.checked){
+            for(var i = 0; i < checkname.length; i++){
+                checkname[i].checked = checkname[i].checked ? false : true;
+            }
+        }
+    }
+</script>
+</html>

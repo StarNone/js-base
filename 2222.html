@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1">b1</button>
+    <button id="b2">b2</button>
+    <button id="b3">b3</button>
+    <button id="b4">b4</button>
+    <button id="b5">b5</button>
+    <button id="b6">b6</button>
+    <button id="b7">b7</button>
+</body>
+<script>
+    var arr = document.getElementsByTagName('button');
+    for(var i = 0;i < arr.length;i++){
+        arr[i].onclick = function(){
+            alert(this.id);
+        }
+    }
+    for(i = 0;i < arr.length;i++){
+        console.log(arr[i].id)
+    }
+</script>
+</html>

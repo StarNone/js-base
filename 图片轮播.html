@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/图片1.webp" alt="" id="img">
+    </div>
+    <button id="onNext">下一张</button>
+    <button id="onPrev">上一张</button>
+</body>
+    <script>
+        var img = document.getElementById("img");
+        var onNext = document.getElementById("onNext");
+        var onPrev = document.getElementById("onPrev");
+        var imgarr = [
+            "./img/图片1.webp",
+            "./img/图片2.jpg",
+            "./img/图片3.jpg",
+            "./img/图片4.webp"
+        ];        
+        onNext.onclick = function(){
+            var item = imgarr.shift();
+            imgarr.push(item);
+            img.src = imgarr[0];
+        }
+        onPrev.onclick = function(){
+            var item = imgarr.pop();
+            imgarr.unshift(item);
+            img.src = imgarr[0];
+        }
+    </script>
+</html>

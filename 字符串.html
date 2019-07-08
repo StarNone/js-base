@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 创建字符串有两种方式
+    // 1.字面量
+    var s1 = "hello";
+    var s2 = "world";
+    // 2.new方式
+    var s3 = new String("Good");
+    var s4 = new String("great");
+    // length 字符串的长度，字符的个数
+    console.log(s1.length);
+    // concat 字符串连接
+    console.log(s1.concat(s2));
+    // charAt 通过索引获取其中的某个字符。
+    console.log(s1.charAt(2));
+    // charCodeAt 通过索引值获取其中的某个字符的ASCII码
+    console.log(s1.charCodeAt(2));
+    // indexOf 根据字符获取其在字符串中的索引值
+    console.log(s1.indexOf("o"));
+    // lastIndexOf 从右向左查找第一个字符出现的位置。
+    console.log(s1.lastIndexOf("l"));
+    console.log(s3.lastIndexOf("o"));
+    // serch 查找
+    console.log(s1.search("e"));
+    console.log(s1.search("l"));
+    // substr substr(start,length) 第一个参数表示开始位置，第二个参数表示截取的长度
+    console.log(s4.substr( 1, 4));
+    // substring substring(start,stop)第一个参数表示开始位置，第二个参数表示结束位置,不包括最后一位，第二个参数不写
+    // 表示到最后。
+    console.log(s4.substring(1,3));
+    console.log(s4.substring(2));
+    // toLowerCase toUpperCase 大小写转换
+    var s5 = "JavaScript";
+    console.log(s5.toLowerCase());
+    console.log(s5.toUpperCase());
+    // replace 实现对字符串的替换操作
+    console.log(s5.replace( "a", "A"));
+    // split 将字符串转换为数组
+    console.log(s5.split("-"));
+
+</script>
+</html>

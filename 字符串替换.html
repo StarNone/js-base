@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="btn">发送</button><br>
+    <textarea name="" id="area" cols="30" rows="10"></textarea>
+</body>
+<script>
+    function $(id){
+        return document.getElementById(id);
+    }
+    var input = $("input");
+    var btn = $("btn");
+    var area = $("area");
+    btn.onclick = function(){
+        var value = input.value;
+        value = value.replace("垃圾" , "**");
+        value = value.replace(/\d+/g,"**") //把数字转换为**
+        area.value = area.value + "\n" + value;
+    }
+</script>
+</html>

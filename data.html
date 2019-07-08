@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="time"></h1>
+</body>
+<script>
+    var h1 = document.getElementById("time");
+    setInterval(function(){
+        var now =new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var date = now.getDate();
+        var day = now.getDay();
+        var hour = now.getHours();
+        var minute = now.getMinutes()
+        var second = now.getSeconds();
+        var minSecond = now.getMilliseconds();
+        console.log(year,month,date,day,hour,minute,second,minSecond);
+        function fixZero(num){
+            if(num >= 10){
+                return "" + num;
+            } else {
+                return "0" + num;
+            }
+        }
+        h1.innerText = "现在是" 
+                    + year + "年" 
+                    + month + "月" 
+                    + date + "日"
+                    + "星期" + day
+                    + " "
+                    + fixZero(hour) + ":"
+                    + fixZero(minute) + ":"
+                    + fixZero(second)  
+    })
+</script>
+</html>
